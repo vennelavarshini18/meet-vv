@@ -9,7 +9,7 @@ const projects = [
     description:
       "An AI-driven assistant translating English to Hindi/Hinglish and generating 4+ content types via a custom Transformer, integrated with Gemini AI and 5+ LangChain connectors.",
     tech: ["LangChain", "TensorFlow", "Keras", "Streamlit", "Generative AI"],
-    image: "/src/assets/projects/aurora.png",
+    image: "/aurora.png",
     github: "https://github.com/vennelavarshini18/AURORA",
     demo: "",
   },
@@ -19,8 +19,8 @@ const projects = [
     description:
       "A deep learning system capable of detecting 6+ emotions from real-time or uploaded audio with 99.1% accuracy, featuring an emotion-adaptive chatbot and a mood analytics journal.",
     tech: ["TensorFlow", "Librosa", "Streamlit", "Plotly", "Sounddevice"],
-    image: "/src/assets/projects/moodos.png",
-    github: "http://github.com/vennelavarshini18/VibeTrack",
+    image: "/moodos.png",
+    github: "https://github.com/vennelavarshini18/VibeTrack",
     demo: "",
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     description:
       "A Web3-powered geospatial intelligence platform combining AI-based satellite segmentation and blockchain land management, analyzing 1,000+ parcels with real-time mapping.",
     tech: ["Solidity", "Hardhat", "Ethereum", "GeoJSON", "Flask", "HQ-SAM"],
-    image: "/src/assets/projects/geosense.png",
+    image: "/geosense.png",
     github: "https://github.com/vennelavarshini18/GeoSense-Somnia-AI-Hackathon",
     demo: "",
   },
@@ -39,7 +39,7 @@ const projects = [
     description:
       "An intelligent platform for educators that generates quizzes, lesson plans, tracks student performance, and provides mental-wellness support.",
     tech: ["LangChain", "Streamlit", "Python-docx"],
-    image: "/src/assets/projects/eduease.png",
+    image: "/eduease.png",
     github: "https://github.com/vennelavarshini18/EduEase",
     demo: "",
   },
@@ -49,7 +49,7 @@ const projects = [
     description:
       "An NLP-based system to detect duplicate questions on Quora, reducing redundancy and improving content quality.",
     tech: ["Scikit-learn", "NLTK", "FuzzyWuzzy", "Streamlit"],
-    image: "/src/assets/projects/queryclone.png",
+    image: "/queryclone.png",
     github: "https://github.com/vennelavarshini18/QueryClone-Detector",
     demo: "",
   },
@@ -59,7 +59,7 @@ const projects = [
     description:
       "A Streamlit app powered by an LSTM language model to intelligently suggest next words and manage/export notes.",
     tech: ["TensorFlow", "Streamlit", "FPDF"],
-    image: "/src/assets/projects/mlnoteshelper.png",
+    image: "/mlnoteshelper.png",
     github: "https://github.com/vennelavarshini18/ML_Notes_Helper",
     demo: "",
   },
@@ -129,11 +129,12 @@ export default function Projects() {
                 ${accent.border}
                 ${accent.shadow}`}
             >
-              {/* Square Image */}
+              {/* Image */}
               <div className="relative w-full overflow-hidden aspect-square rounded-xl bg-black/40">
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 transition opacity-0 bg-black/20 group-hover:opacity-100" />
