@@ -112,7 +112,7 @@ export default function About() {
             </div>
 
             <a
-              href="/Vennela_Resume.pdf"
+              href="/Resume_Vennela_Varshini_Anasoori.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="relative inline-block mt-6 px-5 py-2.5 rounded-xl
