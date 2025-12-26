@@ -101,7 +101,7 @@ export default function Experience() {
           </h3>
 
           <p className="mt-1 text-sm text-gray-400">
-            The Music Society, IIITL · Oct 2025 – Present · Lucknow, India
+            The Music Society, IIITL · Oct 2024 – Present · Lucknow, India
           </p>
 
           <ul className="mt-4 ml-5 space-y-2 text-gray-300 list-disc">
