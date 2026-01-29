@@ -84,7 +84,7 @@ export default function Hero() {
           <motion.a
             whileHover={{ scale: 1.06, y: -2 }}
             whileTap={{ scale: 0.96 }}
-            href="/Vennela_Resume.pdf"
+            href="https://drive.google.com/file/d/1Huyc5VwCDkGciSOoF9cRTHhzf1S5NvWf/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="relative py-3 overflow-hidden font-semibold shadow-lg px-7 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-500"

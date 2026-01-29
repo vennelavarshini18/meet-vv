@@ -112,7 +112,7 @@ export default function About() {
             </div>
 
             <a
-              href="/Vennela_Resume.pdf"
+              href="https://drive.google.com/file/d/1Huyc5VwCDkGciSOoF9cRTHhzf1S5NvWf/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="relative inline-block mt-6 px-5 py-2.5 rounded-xl

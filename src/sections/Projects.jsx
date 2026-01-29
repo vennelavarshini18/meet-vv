@@ -4,13 +4,13 @@ import { Github, ExternalLink } from "lucide-react";
 /* Project Data */
 const projects = [
   {
-    title: "Aurora",
+    title: "PrepRAG",
     accent: "cyan",
     description:
-      "An AI-driven assistant translating English to Hindi/Hinglish and generating 4+ content types via a custom Transformer, integrated with Gemini AI and 5+ LangChain connectors.",
-    tech: ["LangChain", "TensorFlow", "Keras", "Streamlit", "Generative AI"],
-    image: "/aurora.png",
-    github: "https://github.com/vennelavarshini18/AURORA",
+      "A Retrieval-Augmented Generation (RAG) system designed to deliver reliable, context-aware interview preparation by grounding LLM responses in company-specific interview experiences and trusted preparation resources.",
+    tech: ["LangChain", "FAISSStore", "SentenceTransformers", "Streamlit", "Generative AI"],
+    image: "/preprag.png",
+    github: "https://github.com/vennelavarshini18/PrepRAG",
     demo: "",
   },
   {
@@ -31,6 +31,16 @@ const projects = [
     tech: ["Solidity", "Hardhat", "Ethereum", "GeoJSON", "Flask", "HQ-SAM"],
     image: "/geosense.png",
     github: "https://github.com/vennelavarshini18/GeoSense-Somnia-AI-Hackathon",
+    demo: "",
+  },
+    {
+    title: "Aurora",
+    accent: "teal",
+    description:
+      "An AI-driven assistant translating English to Hindi/Hinglish and generating 4+ content types via a custom Transformer, integrated with Gemini AI and 5+ LangChain connectors.",
+    tech: ["LangChain", "TensorFlow", "Keras", "Streamlit", "Generative AI"],
+    image: "/aurora.png",
+    github: "https://github.com/vennelavarshini18/AURORA",
     demo: "",
   },
   {
@@ -55,7 +65,7 @@ const projects = [
   },
   {
     title: "ML Notes Helper",
-    accent: "teal",
+    accent: "cyan",
     description:
       "A Streamlit app powered by an LSTM language model to intelligently suggest next words and manage/export notes.",
     tech: ["TensorFlow", "Streamlit", "FPDF"],
