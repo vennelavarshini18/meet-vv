@@ -4,8 +4,18 @@ import { Github, ExternalLink } from "lucide-react";
 /* Project Data */
 const projects = [
   {
-    title: "PrepRAG",
+    title: "WareFlow",
     accent: "cyan",
+    description:
+  "BDeveloped a high-capacity autonomous routing system to eliminate warehouse bottlenecks, replacing standard pathfinding with dynamic AI navigation to ensure smooth, collision-free movement in crowded environments.",
+    tech: ["Python", "PyTorch", "Stable Baselines3", "Gymnasium", "FastAPI", "React", "WebSockets"],
+    image: "/wareflow.png",
+    github: "https://github.com/vennelavarshini18/WareFlow",
+    demo: "",
+  },
+  {
+    title: "PrepRAG",
+    accent: "purple",
     description:
       "A Retrieval-Augmented Generation (RAG) system designed to deliver reliable, context-aware interview preparation by grounding LLM responses in company-specific interview experiences and trusted preparation resources.",
     tech: ["LangChain", "FAISSStore", "SentenceTransformers", "Streamlit", "Generative AI"],
@@ -15,7 +25,7 @@ const projects = [
   },
   {
     title: "VibeTrack",
-    accent: "purple",
+    accent: "teal",
     description:
       "A deep learning system capable of detecting 6+ emotions from real-time or uploaded audio with 99.1% accuracy, featuring an emotion-adaptive chatbot and a mood analytics journal.",
     tech: ["TensorFlow", "Librosa", "Streamlit", "Plotly", "Sounddevice"],
@@ -25,7 +35,7 @@ const projects = [
   },
   {
     title: "GeoSense",
-    accent: "teal",
+    accent: "purple",
     description:
       "A Web3-powered geospatial intelligence platform combining AI-based satellite segmentation and blockchain land management, analyzing 1,000+ parcels with real-time mapping.",
     tech: ["Solidity", "Hardhat", "Ethereum", "GeoJSON", "Flask", "HQ-SAM"],
@@ -35,7 +45,7 @@ const projects = [
   },
     {
     title: "Aurora",
-    accent: "teal",
+    accent: "cyan",
     description:
       "An AI-driven assistant translating English to Hindi/Hinglish and generating 4+ content types via a custom Transformer, integrated with Gemini AI and 5+ LangChain connectors.",
     tech: ["LangChain", "TensorFlow", "Keras", "Streamlit", "Generative AI"],
@@ -45,7 +55,7 @@ const projects = [
   },
   {
     title: "EduEase",
-    accent: "cyan",
+    accent: "purple",
     description:
       "An intelligent platform for educators that generates quizzes, lesson plans, tracks student performance, and provides mental-wellness support.",
     tech: ["LangChain", "Streamlit", "Python-docx"],
@@ -55,7 +65,7 @@ const projects = [
   },
   {
     title: "Query Clone Detector",
-    accent: "purple",
+    accent: "teal",
     description:
       "An NLP-based system to detect duplicate questions on Quora, reducing redundancy and improving content quality.",
     tech: ["Scikit-learn", "NLTK", "FuzzyWuzzy", "Streamlit"],
@@ -65,7 +75,7 @@ const projects = [
   },
   {
     title: "ML Notes Helper",
-    accent: "cyan",
+    accent: "purple",
     description:
       "A Streamlit app powered by an LSTM language model to intelligently suggest next words and manage/export notes.",
     tech: ["TensorFlow", "Streamlit", "FPDF"],

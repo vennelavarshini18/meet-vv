@@ -22,8 +22,8 @@ const achievements = [
     color: "cyan",
   },
   {
-    title: "NXP WIT 2025",
-    description: "Stood among the top 175 semifinalists chosen over 15000+ applicants nationwide.",
+    title: "DevMatrix Hackathon 2026",
+    description: "Recognized as a Winner at DevMatrix, for demonstrating technical excellence and performance across all judging parameters.",
     color: "purple",
   },
   {
