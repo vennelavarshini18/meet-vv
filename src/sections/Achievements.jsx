@@ -1,46 +1,72 @@
 import { motion } from "framer-motion";
 
 const achievements = [
-  {
-    title: "AIR 6 - IIWCPC 2025",
-    description: "Selected among the top 32 finalists nationwide and secured All India Rank 6 in the finals of the IIWCPC 2025 Track 1.",
-    color: "cyan",
-  },
-  {
-    title: "Google Girl Hackathon 2025",
-    description: "Ranked in the top 2.5%, advancing to the Semifinals among 34,000+ applicants from 700+ universities.",
-    color: "purple",
-  },
-  {
-    title: "Reliance Foundation Scholar 2025",
-    description: "Earned a merit-based Reliance Foundation scholarship, awarded to the top 5% of 100,000+ applicants.",
-    color: "teal",
-  },
-  {
-    title: "Competitive Programming",
-    description: "Achieved 3 star on CodeChef and Pupil Rank on Codeforces through by solving over 400+ problems on various platforms.",
-    color: "cyan",
-  },
-  {
-    title: "DevMatrix Hackathon 2026",
-    description: "Recognized as a Winner at DevMatrix, for demonstrating technical excellence and performance across all judging parameters.",
-    color: "purple",
-  },
-  {
-    title: "FOSS Weekend",
-    description: "Secured 3rd place among 240 in FOSS Weekend, IIIT Lucknow's flagship open-source competition.",
-    color: "teal",
-  },
-  {
-    title: "GSSoC 2025 & Kaggle Contributor",
-    description: "Selected as a contributor for GSSoC 2025, actively contributed to data science repositories and achieved Contributor title by publishing high-quality notebooks and ML Insights on Kaggle.",
-    color: "cyan",
-  },
-  {
-    title: "JEE Main 2024",
-    description: "Achieved top 1.7 percentile nationally in JEE Main 2024 among 1.6 million candidates.",
-    color: "purple",
-  },
+{
+title: "Cisco CWIP 2026",
+description:
+"Selected as an upcoming Technical Intern I through the Cisco Women Internship Programme 2026.",
+color: "cyan",
+},
+{
+title: "Google Summer of Code 2026",
+description:
+"Chosen as a contributor under HumanAI Foundation to work on the ISSR project for the TRIP Laboratory.",
+color: "purple",
+},
+{
+title: "AIR 6 - IIWCPC 2025",
+description:
+"Selected among the top 32 finalists nationwide and secured All India Rank 6 in the finals of IIWCPC 2025 Track 1.",
+color: "teal",
+},
+{
+title: "Google Girl Hackathon 2025",
+description:
+"Ranked in the top 2.5%, advancing to the Semifinals among 34,000+ applicants from 700+ universities.",
+color: "cyan",
+},
+{
+title: "Reliance Foundation Scholar 2025",
+description:
+"Earned a merit-based Reliance Foundation scholarship, awarded to the top 5% of 100,000+ applicants.",
+color: "purple",
+},
+{
+title: "Data Structures & Algorithms",
+description:
+"Solved 450+ problems on LeetCode, strengthening algorithmic thinking, execution speed, and problem-solving skills.",
+color: "teal",
+},
+{
+title: "Competitive Programming",
+description:
+"Achieved 3-star on CodeChef and earned Pupil rank on Codeforces through consistent contest participation and structured competitive programming practice.",
+color: "cyan",
+},
+{
+title: "DevMatrix Hackathon 2026",
+description:
+"Recognized as a First Runner-up at DevMatrix for demonstrating technical excellence and strong performance across judging parameters.",
+color: "purple",
+},
+{
+title: "FOSS Weekend",
+description:
+"Secured 3rd place among 240 participants in FOSS Weekend, IIIT Lucknow's flagship open-source competition.",
+color: "teal",
+},
+{
+title: "GSSoC 2025 & Kaggle Contributor",
+description:
+"Selected as a contributor for GSSoC 2025 and achieved Kaggle Contributor status by publishing high-quality notebooks and ML insights.",
+color: "cyan",
+},
+{
+title: "JEE Main 2024",
+description:
+"Achieved top 1.7 percentile nationally in JEE Main 2024 among 1.6 million candidates.",
+color: "purple",
+},
 ];
 
 const colorMap = {

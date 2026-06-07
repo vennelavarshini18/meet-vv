@@ -65,7 +65,7 @@ export default function About() {
           >
             {/* Score Badge */}
             <div className="absolute top-0 right-0 flex flex-col items-center justify-center p-1 m-4 text-white rounded-lg w-14 h-14 bg-gradient-to-br from-cyan-500 to-purple-500">
-              <span className="text-xl font-bold tracking-tight">9.65</span>
+              <span className="text-xl font-bold tracking-tight">9.616</span>
               <span className="text-xs uppercase opacity-80">CGPA</span>
             </div>
 
@@ -112,7 +112,7 @@ export default function About() {
             </div>
 
             <a
-              href="https://drive.google.com/file/d/1iMu-L8qE-bers81xsUDpzjKazYZ-sx7t/view?usp=sharing"
+              href="https://drive.google.com/file/d/1oMDXW9jbOyJ-ahypBGtYQ6x-pZTm3tB0/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="relative inline-block mt-6 px-5 py-2.5 rounded-xl

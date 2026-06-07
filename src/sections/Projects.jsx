@@ -7,8 +7,8 @@ const projects = [
     title: "WareFlow",
     accent: "cyan",
     description:
-  "BDeveloped a high-capacity autonomous routing system to eliminate warehouse bottlenecks, replacing standard pathfinding with dynamic AI navigation to ensure smooth, collision-free movement in crowded environments.",
-    tech: ["Python", "PyTorch", "Stable Baselines3", "Gymnasium", "FastAPI", "React", "WebSockets"],
+      "Built an AI-powered logistics platform for smart shipment tracking, traffic and weather-aware rerouting, and RL-based warehouse navigation for efficient and collision-free operations.",
+    tech: ["Python", "PyTorch", "Stable Baselines3", "FastAPI", "React", "Three.js", "Firebase", "Google Cloud Platform"],
     image: "/wareflow.png",
     github: "https://github.com/vennelavarshini18/WareFlow",
     demo: "",
