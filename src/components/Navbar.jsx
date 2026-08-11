@@ -1,31 +1,37 @@
 import {
   Home,
   User,
+  Layers,
   Briefcase,
+  Users,
   Code,
   Trophy,
   Mail
 } from "lucide-react";
 
 const navItems = [
-  { icon: Home, link: "#home" },
-  { icon: User, link: "#about" },
-  { icon: Briefcase, link: "#experience" },
-  { icon: Code, link: "#projects" },
-  { icon: Trophy, link: "#achievements" },
-  { icon: Mail, link: "#contact" }
+  { icon: Home, link: "#home", label: "Home" },
+  { icon: User, link: "#about", label: "About" },
+  { icon: Layers, link: "#skills", label: "Skills" },
+  { icon: Briefcase, link: "#work-experience", label: "Experience" },
+  { icon: Users, link: "#experience", label: "Leadership" },
+  { icon: Code, link: "#projects", label: "Projects" },
+  { icon: Trophy, link: "#achievements", label: "Achievements" },
+  { icon: Mail, link: "#contact", label: "Contact" }
 ];
 
 export default function Navbar() {
   return (
-    <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 backdrop-blur-lg bg-white/5 border border-white/10 rounded-full px-6 py-3 flex gap-6">
-      {navItems.map(({ icon: Icon, link }, i) => (
+    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 backdrop-blur-2xl bg-darkSurfaceLighter/70 border border-darkBorder rounded-full px-6 py-4 flex gap-6 sm:gap-8 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+      {navItems.map(({ icon: Icon, link, label }, i) => (
         <a
           key={i}
           href={link}
-          className="text-gray-300 hover:text-cyan-400 transition"
+          title={label}
+          className="relative group text-textMuted hover:text-primaryLight transition-colors hover:scale-110 active:scale-95 p-2"
         >
-          <Icon className="w-5 h-5" />
+          <div className="absolute inset-0 bg-primaryLight/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity blur-md" />
+          <Icon className="w-5 h-5 relative z-10" strokeWidth={1.5} />
         </a>
       ))}
     </div>

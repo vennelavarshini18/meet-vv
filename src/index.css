@@ -5,3 +5,23 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  @apply bg-darkBase text-textMain;
+}
+
+@layer utilities {
+  .animate-shimmer {
+    background-size: 200% auto;
+    animation: shimmer 3s infinite linear;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

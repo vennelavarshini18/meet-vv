@@ -1,139 +1,174 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, ArrowRight } from "lucide-react";
+import Tilt from "react-parallax-tilt";
 
 /* Motion helpers */
 const fadeUp = {
-  hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3
+    }
+  }
+};
+
+const text3DVariants = {
+  hidden: { opacity: 0, rotateX: -20, y: 50 },
+  visible: {
+    opacity: 1,
+    rotateX: 0,
+    y: 0,
+    transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] }
+  }
 };
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex items-center justify-center min-h-screen overflow-hidden font-body"
+      className="relative flex items-center justify-center min-h-screen overflow-hidden font-body perspective-[1000px]"
     >
-      {/* Animated Background Glow */}
-      <motion.div
-        className="absolute inset-0 -z-10"
-        animate={{
-          opacity: [0.6, 0.9, 0.6],
-          scale: [1, 1.03, 1],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
+      
+      {/* Sleek Sci-Fi Rings (Hero Only) */}
+      <div 
+        className="absolute top-0 left-0 w-full h-screen flex items-center justify-center pointer-events-none z-0"
+        style={{ 
+          maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', 
+          WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' 
         }}
       >
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/20 rounded-full blur-[140px]" />
-        <div className="absolute top-1/2 left-1/3 w-[520px] h-[520px] bg-purple-500/20 rounded-full blur-[140px]" />
-      </motion.div>
+        {/* Core Glow */}
+        <div className="absolute w-[40vw] h-[40vw] bg-primary/20 rounded-full blur-[100px]" />
+        
+        {/* Outer Ring 1 */}
+        <motion.div
+          animate={{ rotateX: [60, 60], rotateY: [0, 360], rotateZ: [0, 360] }}
+          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+          className="absolute w-[800px] h-[800px] rounded-full border border-primary/40 shadow-[0_0_50px_rgba(166,124,82,0.1)]"
+          style={{ transformStyle: "preserve-3d" }}
+        >
+          {/* Glowing node on ring */}
+          <div className="absolute top-0 left-1/2 w-3 h-3 bg-primaryLight rounded-full shadow-[0_0_30px_#D9C5A0]" />
+        </motion.div>
 
-      {/* Hero Card */}
+        {/* Outer Ring 2 (Counter rotating) */}
+        <motion.div
+          animate={{ rotateX: [70, 70], rotateY: [360, 0], rotateZ: [360, 0] }}
+          transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+          className="absolute w-[600px] h-[600px] rounded-full border border-secondary/50 shadow-[0_0_40px_rgba(77,87,78,0.2)]"
+          style={{ transformStyle: "preserve-3d" }}
+        />
+
+        {/* Inner Ring */}
+        <motion.div
+          animate={{ rotateX: [50, 50], rotateY: [0, -360] }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+          className="absolute w-[400px] h-[400px] rounded-full border-2 border-primary/20 border-t-primary/60 border-b-primary/60 shadow-[0_0_30px_rgba(166,124,82,0.2)]"
+          style={{ transformStyle: "preserve-3d" }}
+        />
+      </div>
+
+      {/* Main Content */}
       <motion.div
+        variants={staggerContainer}
         initial="hidden"
         animate="visible"
-        transition={{ staggerChildren: 0.12 }}
-        className="relative bg-white/5 backdrop-blur-2xl border border-white/10 
-                   rounded-3xl px-10 py-12 text-center max-w-3xl
-                   shadow-[0_20px_60px_rgba(0,0,0,0.6)]
-                   hover:shadow-[0_0_80px_rgba(99,102,241,0.25)]
-                   transition-shadow duration-500"
+        className="relative z-10 w-full max-w-5xl px-6 flex flex-col items-center text-center mt-20"
       >
-        {/* Glow Ring */}
-        <div className="absolute inset-0 pointer-events-none rounded-3xl ring-1 ring-white/10" />
-
-        {/* Name */}
-        <motion.h1
-          variants={fadeUp}
-          className="text-5xl md:text-6xl font-heading font-bold tracking-tight 
-                     bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 
-                     bg-[length:200%_200%] bg-clip-text text-transparent
-                     animate-[gradient_6s_ease_infinite]"
+        <Tilt
+          tiltMaxAngleX={4}
+          tiltMaxAngleY={4}
+          scale={1.02}
+          transitionSpeed={2500}
+          glareEnable={false}
+          className="flex flex-col items-center w-full"
         >
-          Vennela Varshini Anasoori
-        </motion.h1>
+          {/* Title with 3D Effect */}
+          <motion.div variants={text3DVariants} style={{ transformStyle: "preserve-3d" }} className="flex flex-col items-center">
+            <h1 className="text-6xl md:text-7xl lg:text-[5rem] font-heading font-light tracking-tight text-textMain leading-tight" style={{ transform: "translateZ(40px)" }}>
+              Vennela Varshini
+              <br />
+              Anasoori
+            </h1>
+            
+            {/* 3 Tags */}
+            <div 
+              className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mt-6 text-base md:text-lg lg:text-xl font-mono tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-primaryLight via-primary to-primaryLight font-medium animate-shimmer"
+              style={{ transform: "translateZ(30px)" }}
+            >
+              <span>BTech Student</span>
+              <span className="text-primary/50 text-sm md:text-base">●</span>
+              <span>AI/ML Developer</span>
+              <span className="text-primary/50 text-sm md:text-base">●</span>
+              <span>DSA Enthusiast</span>
+            </div>
+          </motion.div>
 
-        {/* Subtle underline accent */}
-        <div className="mx-auto mt-3 h-[2px] w-28 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 opacity-70" />
-
-        {/* Tagline */}
-        <motion.p
-          variants={fadeUp}
-          className="mt-5 text-2xl font-semibold tracking-wide text-gray-100"
-        >
-          BTech Student · AI/ML Architect · DSA Enthusiast
-        </motion.p>
-
-        {/* Contact */}
-        <motion.p
-          variants={fadeUp}
-          className="mt-3 text-base text-gray-400"
-        >
-          Telangana, India <span className="font-bold text-gray-500">·</span>{" "}
-          vennelavarshini07@gmail.com
-        </motion.p>
+          {/* Description */}
+          <motion.p
+            variants={fadeUp}
+            style={{ transform: "translateZ(20px)" }}
+            className="max-w-2xl mt-8 text-lg md:text-xl font-light text-textMuted leading-relaxed"
+          >
+            Endlessly Curious 
+            <span className="text-secondaryLight/40 mx-3 font-mono">/</span> 
+            Relentlessly Learning
+          </motion.p>
+        </Tilt>
 
         {/* Actions */}
         <motion.div
           variants={fadeUp}
-          className="flex items-center justify-center gap-6 mt-8"
+          className="flex flex-col sm:flex-row items-center gap-6 mt-12 z-20 relative"
         >
-          {/* Resume */}
-          <motion.a
-            whileHover={{ scale: 1.06, y: -2 }}
-            whileTap={{ scale: 0.96 }}
-            href="https://drive.google.com/file/d/1oMDXW9jbOyJ-ahypBGtYQ6x-pZTm3tB0/view?usp=sharing"
+          {/* Primary Action */}
+          <a
+            href="#projects"
+            className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 overflow-hidden font-medium text-darkBase bg-gradient-to-r from-primaryLight to-primary transition-all rounded-full hover:shadow-[0_0_30px_rgba(217,197,160,0.3)] hover:scale-[1.02] active:scale-95"
+          >
+            <span className="relative z-10">Explore My Work</span>
+            <ArrowRight className="w-5 h-5 relative z-10 transition-transform group-hover:translate-x-1" />
+          </a>
+
+          {/* Secondary Action */}
+          <a
+            href="https://drive.google.com/file/d/1veKBKm8ab9fQyE4EXbLP3qANIM-8tdN8/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative py-3 overflow-hidden font-semibold shadow-lg px-7 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-500"
+            className="group relative px-8 py-4 font-medium text-textMain transition-all border border-darkBorder rounded-full hover:border-primary hover:text-primaryLight hover:bg-darkSurface"
           >
-            <span className="relative z-10">View Resume</span>
-            {/* sheen */}
-            <span className="absolute inset-0 transition-transform duration-700 -translate-x-full skew-x-12 bg-white/20 hover:translate-x-full" />
-          </motion.a>
+            View Resume
+          </a>
+        </motion.div>
 
-          {/* GitHub */}
-          <motion.a
-            whileHover={{ scale: 1.15 }}
-            whileTap={{ scale: 0.9 }}
+        {/* Social Links */}
+        <motion.div variants={fadeUp} className="flex items-center gap-6 mt-16 pt-8 w-full max-w-md justify-center z-20 relative">
+          <a
             href="https://github.com/vennelavarshini18"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 text-white transition border rounded-full border-white/20
-                       hover:border-cyan-400 hover:text-cyan-400
-                       hover:shadow-[0_0_20px_rgba(34,211,238,0.6)]"
+            className="group flex items-center justify-center w-14 h-14 rounded-full border border-darkBorder bg-darkBase text-[#D1D4D1] hover:text-primaryLight hover:border-primary/50 hover:bg-darkSurfaceLighter transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(217,197,160,0.2)]"
           >
-            <Github className="w-6 h-6" />
-          </motion.a>
-
-          {/* LinkedIn */}
-          <motion.a
-            whileHover={{ scale: 1.15 }}
-            whileTap={{ scale: 0.9 }}
+            <Github className="w-7 h-7" strokeWidth={1.5} />
+          </a>
+          <a
             href="https://www.linkedin.com/in/vennela-varshini-anasoori/"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 text-white transition border rounded-full border-white/20
-                       hover:border-purple-400 hover:text-purple-400
-                       hover:shadow-[0_0_20px_rgba(168,85,247,0.6)]"
+            className="group flex items-center justify-center w-14 h-14 rounded-full border border-darkBorder bg-darkBase text-[#D1D4D1] hover:text-primaryLight hover:border-primary/50 hover:bg-darkSurfaceLighter transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(217,197,160,0.2)]"
           >
-            <Linkedin className="w-6 h-6" />
-          </motion.a>
+            <Linkedin className="w-7 h-7" strokeWidth={1.5} />
+          </a>
         </motion.div>
       </motion.div>
-
-      {/* Gradient animation keyframes */}
-      <style>
-        {`
-          @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-          }
-        `}
-      </style>
     </section>
   );
 }
+
