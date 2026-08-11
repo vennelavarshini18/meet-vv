@@ -81,7 +81,7 @@ export default function Skills() {
           const isPrimary = category.color === "primary";
           const themeColor = isPrimary ? "primary" : "secondary";
           const hoverBorder = isPrimary ? "hover:border-secondary/50" : "hover:border-secondary/50";
-          const glowColor = isPrimary ? "rgba(166,124,82,0.15)" : "rgba(77,87,78,0.2)";
+          const hoverShadowClass = isPrimary ? "hover:shadow-[0_0_40px_rgba(166,124,82,0.15)]" : "hover:shadow-[0_0_40px_rgba(77,87,78,0.2)]";
           const barGradient = isPrimary 
             ? "from-primaryLight/20 via-primaryLight to-primaryLight/20" 
             : "from-secondary/30 via-secondary to-secondary/30";
@@ -104,7 +104,7 @@ export default function Skills() {
                 className={`relative overflow-hidden h-full p-8 rounded-3xl
                             bg-darkSurfaceLighter/50 backdrop-blur-3xl border border-white/10
                             transition-all duration-700
-                            ${hoverBorder} group shadow-lg hover:shadow-[0_0_40px_${glowColor}]`}
+                            ${hoverBorder} group shadow-lg ${hoverShadowClass}`}
               >
                 {/* Accent Background Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
