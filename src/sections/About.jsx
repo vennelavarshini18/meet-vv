@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap, FileText, ArrowRight } from "lucide-react";
+import { GraduationCap, FileText, ArrowRight, PenTool } from "lucide-react";
 import Tilt from "react-parallax-tilt";
 import SectionParticles from "../components/SectionParticles";
 
@@ -157,6 +157,51 @@ export default function About() {
                   className="flex items-center justify-between px-6 py-4 rounded-xl bg-darkBase border border-darkBorder text-[#D1D4D1] group-hover:border-secondary transition-colors shadow-lg"
                 >
                   <span className="font-medium text-sm">View & Download</span>
+                  <ArrowRight className="w-4 h-4 text-secondary group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+            </Tilt>
+          </motion.div>
+
+          {/* Blog Card */}
+          <motion.div variants={tiltVariants} className="h-full md:col-span-2">
+            <Tilt
+              tiltMaxAngleX={3}
+              tiltMaxAngleY={3}
+              scale={1.01}
+              transitionSpeed={2500}
+              glareEnable={true}
+              glareMaxOpacity={0.1}
+              glareColor="#ffffff"
+              glarePosition="all"
+              className="h-full group bg-darkSurfaceLighter/50 backdrop-blur-3xl border border-white/10 rounded-3xl p-6 md:p-8 relative overflow-hidden transition-all duration-500 hover:border-secondary/50 flex flex-col md:flex-row md:items-center justify-between gap-6"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative z-10 flex-grow" style={{ transform: "translateZ(30px)" }}>
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="p-3 bg-darkBase border border-darkBorder rounded-xl text-secondary group-hover:scale-110 transition-transform shadow-md">
+                    <PenTool className="w-6 h-6" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-heading font-medium text-[#D1D4D1]">Writing</h3>
+                    <p className="text-sm font-medium text-secondary">Medium Publications</p>
+                  </div>
+                </div>
+
+                <p className="mt-2 text-sm text-textBody leading-relaxed max-w-xl">
+                  Have a look at my blogs! I write about technical deep-dives, my dev journey, and architectural insights.
+                </p>
+              </div>
+
+              <div className="relative z-10 shrink-0" style={{ transform: "translateZ(20px)" }}>
+                <a
+                  href="https://medium.com/@vennelavarshini07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-4 px-8 py-4 rounded-xl bg-darkBase border border-darkBorder text-[#D1D4D1] group-hover:border-secondary transition-colors shadow-lg whitespace-nowrap"
+                >
+                  <span className="font-medium text-sm">Read Articles</span>
                   <ArrowRight className="w-4 h-4 text-secondary group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
