@@ -81,7 +81,19 @@ export default function WorkExperience() {
                 </div>
                 
                 <div className="flex items-center gap-4 text-sm font-medium text-textBody mb-6">
-                  <span className="text-secondaryLight">{exp.company}</span>
+                  {exp.link ? (
+                    <a
+                      href={exp.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-secondaryLight hover:underline underline-offset-4 transition-all"
+                      title="View Certificate / Verification"
+                    >
+                      {exp.company}
+                    </a>
+                  ) : (
+                    <span className="text-secondaryLight">{exp.company}</span>
+                  )}
                   <span className="w-1 h-1 rounded-full bg-darkBorder" />
                   <span>{exp.location}</span>
                 </div>

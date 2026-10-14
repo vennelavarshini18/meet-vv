@@ -6,6 +6,7 @@ import { Network, Code, Music } from "lucide-react";
 const experienceData = [
   {
     name: "Axios, The Technical Society, IIITL",
+    link: "https://www.axiosiiitl.dev/",
     icon: Network,
     roles: [
       {
@@ -25,9 +26,15 @@ const experienceData = [
         description: "Directed workshops and interactive sessions on Git, GitHub, and Open Source workflows for over 200 aspiring developers.",
       },
       {
+        title: "Senior Member - Women in Tech",
+        duration: "Sep 2026 – Present",
+        description: "Leading mentorship initiatives, technical workshops, and community programs empowering women across technology domains.",
+      },
+      {
         title: "Member - Women in Tech",
-        duration: "Feb 2026 – Present",
+        duration: "Feb 2026 – Sep 2026",
         description: "Cultivated a collaborative and empowering community dedicated to supporting women navigating technology domains.",
+        isSubRole: true,
       },
     ]
   },
@@ -36,9 +43,15 @@ const experienceData = [
     icon: Code,
     roles: [
       {
+        title: "Executive Member - FOSS Wing",
+        duration: "Sep 2026 – Present",
+        description: "Spearheading open-source initiatives, hackathons, and technical bootcamps to foster open development practices across campus.",
+      },
+      {
         title: "Member - FOSS Wing",
-        duration: "Sep 2025 – Present",
+        duration: "Sep 2025 – Sep 2026",
         description: "Facilitated technical seminars on Open Source contribution and version control for the campus developer community.",
+        isSubRole: true,
       }
     ]
   },
@@ -113,9 +126,22 @@ export default function Experience() {
                   <div className="absolute inset-0 bg-secondary/5 group-hover:bg-secondary/10 transition-colors" />
                   <Icon className="w-7 h-7 relative z-10 group-hover:scale-110 transition-transform duration-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-heading font-medium text-[#D1D4D1]">
-                  {org.name}
-                </h3>
+                {org.link ? (
+                  <a
+                    href={org.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/orglink transition-colors"
+                  >
+                    <h3 className="text-2xl md:text-3xl font-heading font-medium text-[#D1D4D1] group-hover/orglink:text-secondaryLight transition-colors">
+                      {org.name}
+                    </h3>
+                  </a>
+                ) : (
+                  <h3 className="text-2xl md:text-3xl font-heading font-medium text-[#D1D4D1]">
+                    {org.name}
+                  </h3>
+                )}
               </motion.div>
 
               {/* Roles Container */}

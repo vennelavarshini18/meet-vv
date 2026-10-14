@@ -83,16 +83,22 @@ export default function About() {
               glareMaxOpacity={0.1}
               glareColor="#ffffff"
               glarePosition="all"
-              className="h-full group bg-darkSurfaceLighter/50 backdrop-blur-3xl border border-white/10 rounded-3xl p-8 relative overflow-hidden transition-all duration-500 hover:border-secondary/50"
+              className="h-full group bg-darkSurfaceLighter/50 backdrop-blur-3xl border border-white/10 rounded-3xl p-8 relative overflow-hidden transition-all duration-500 hover:border-secondary/50 flex flex-col justify-between"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className="relative z-10" style={{ transform: "translateZ(30px)" }}>
+              <div className="relative z-10 flex-grow" style={{ transform: "translateZ(30px)" }}>
                 {/* Score Badge */}
-                <div className="absolute top-0 right-0 flex flex-col items-center justify-center p-2 border border-darkBorder bg-darkBase rounded-xl shadow-lg">
-                  <span className="text-xl font-bold tracking-tight text-secondary">9.616</span>
+                <a
+                  href="https://drive.google.com/file/d/1hi9iSeEUH31rrSorD9Ft9OC39F6OlvFo/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute top-0 right-0 flex flex-col items-center justify-center p-2 border border-darkBorder bg-darkBase rounded-xl shadow-lg hover:border-secondary transition-colors"
+                  title="View Official Transcript"
+                >
+                  <span className="text-xl font-bold tracking-tight text-secondary">9.55</span>
                   <span className="text-[10px] uppercase tracking-widest text-textBody">CGPA</span>
-                </div>
+                </a>
 
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-3 bg-darkBase border border-darkBorder rounded-xl text-secondary group-hover:scale-110 transition-transform shadow-md">
@@ -113,6 +119,18 @@ export default function About() {
                   <span>Aug 2024 – Jun 2028</span>
                   <span>Lucknow, IN</span>
                 </div>
+              </div>
+
+              <div className="relative z-10 mt-8" style={{ transform: "translateZ(20px)" }}>
+                <a
+                  href="https://drive.google.com/file/d/1hi9iSeEUH31rrSorD9Ft9OC39F6OlvFo/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between px-6 py-4 rounded-xl bg-darkBase border border-darkBorder text-[#D1D4D1] group-hover:border-secondary transition-colors shadow-lg"
+                >
+                  <span className="font-medium text-sm">Official Transcript</span>
+                  <ArrowRight className="w-4 h-4 text-secondary group-hover:translate-x-1 transition-transform" />
+                </a>
               </div>
             </Tilt>
           </motion.div>
@@ -151,7 +169,7 @@ export default function About() {
 
               <div className="relative z-10 mt-8" style={{ transform: "translateZ(20px)" }}>
                 <a
-                  href="https://drive.google.com/file/d/1veKBKm8ab9fQyE4EXbLP3qANIM-8tdN8/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1HbtbtfYvKPBHqh_sBmWC2OcLY0Zk3AnU/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between px-6 py-4 rounded-xl bg-darkBase border border-darkBorder text-[#D1D4D1] group-hover:border-secondary transition-colors shadow-lg"

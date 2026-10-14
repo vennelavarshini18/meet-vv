@@ -139,7 +139,7 @@ export default function Hero() {
 
           {/* Secondary Action */}
           <a
-            href="https://drive.google.com/file/d/1veKBKm8ab9fQyE4EXbLP3qANIM-8tdN8/view?usp=sharing"
+            href="https://drive.google.com/file/d/1HbtbtfYvKPBHqh_sBmWC2OcLY0Zk3AnU/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative px-8 py-4 font-medium text-textMain transition-all border border-darkBorder rounded-full hover:border-primary hover:text-primaryLight hover:bg-darkSurface"
